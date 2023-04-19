@@ -119,7 +119,6 @@ app.get('/starship/:id', async (req, res) => {
     const starship = await starwars.starship(req.params.id);
     res.status(200).send(starship);
   } catch (error) {
-    const e=error
     console.log(error.message);
     res.status(500).send(error.message);
   }
